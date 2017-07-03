@@ -1,9 +1,9 @@
 FROM debian:8
 
-RUN apt-get update -q
-RUN apt-get install -qy \
-    lib32gcc1 curl
-RUN apt-get clean
+RUN apt-get update -q && \
+  apt-get install -qy \
+  lib32gcc1 curl && \
+  apt-get clean
 
 RUN useradd -m steam
 USER steam
